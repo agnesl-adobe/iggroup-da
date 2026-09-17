@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-steps",
+  "baseBlock": "columns",
+  "canonicalModel": "container",
+  "visualCharacteristics": "Two-column layout on a light-grey rounded panel: a heading, sub-heading, numbered three-step list and CTA button on one side, a lifestyle image on the other.",
+  "contentPattern": "A single row of two columns; one column is heading + numbered steps + button, the other is an image.",
+  "usage": "Onboarding / 'get started in N steps' section with a supporting image.",
+  "options": [],
+  "memberVariantIds": ["columns-steps"]
+}

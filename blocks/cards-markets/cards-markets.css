@@ -1,0 +1,142 @@
+/* cards-markets — market-category grid.
+   Design migrated from ig.com/en "Access 17,000+ markets" card grid.
+   Light-grey rounded cards, full-width cover image on top, title link + short copy.
+   Values extracted from source computed styles; type/colours reference brand tokens. */
+
+.cards-markets > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 40px;
+}
+
+/* Card */
+.cards-markets > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+/* Image area — full-bleed cover at the top of the card */
+.cards-markets .cards-markets-icon {
+  margin: 0;
+}
+
+.cards-markets .cards-markets-icon picture {
+  display: block;
+  width: 100%;
+}
+
+.cards-markets .cards-markets-icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 373 / 239;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Text area */
+.cards-markets .cards-markets-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 24px;
+}
+
+/* Title (h3 > a) — black heading, no inline-link chevron/colour */
+.cards-markets .cards-markets-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.cards-markets .cards-markets-body h3 a:any-link {
+  color: #000;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  white-space: normal;
+}
+
+.cards-markets .cards-markets-body h3 a::after {
+  content: none;
+}
+
+.cards-markets .cards-markets-body h3 a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Description */
+.cards-markets .cards-markets-body p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000;
+}
+
+@media (width >= 600px) {
+  .cards-markets > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-markets > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-markets .cards-markets-body {
+    padding: 40px;
+  }
+
+  .cards-markets .cards-markets-body h3 {
+    font-size: 32px;
+  }
+}
+
+/* Center the markets section heading, copy and CTAs like ig.com. The title,
+   subtitle and CTA buttons are section default content around the cards block. */
+main .section:has(.cards-markets) > .default-content-wrapper {
+  text-align: center;
+}
+
+/* breathing room below the heading/subtitle, before the cards */
+main .section:has(.cards-markets) > .default-content-wrapper:first-child {
+  margin-bottom: 40px;
+}
+
+/* CTA pair: a single centered row, with space above it after the cards */
+main .section:has(.cards-markets) > .default-content-wrapper:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+main .section:has(.cards-markets) > .default-content-wrapper:last-child .button-container {
+  margin: 0;
+}
+
+/* Second CTA renders as the outlined (demo) variant */
+main .section:has(.cards-markets) > .default-content-wrapper:last-child .button-container:last-child a.button {
+  background-color: transparent !important;
+  border: 1px solid var(--text-color) !important;
+  color: var(--text-color) !important;
+}

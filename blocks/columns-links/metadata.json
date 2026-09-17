@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-links",
+  "baseBlock": "columns",
+  "canonicalModel": "container",
+  "visualCharacteristics": "Two side-by-side columns, each with a lifestyle image, a sub-heading and a list of four arrow links.",
+  "contentPattern": "A single row of two columns; each column is an image above a heading and a link list.",
+  "usage": "Audience-split navigation (e.g. experienced vs new traders) with quick links.",
+  "options": [],
+  "memberVariantIds": ["columns-links"]
+}

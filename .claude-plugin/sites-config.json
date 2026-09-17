@@ -1,0 +1,40 @@
+{
+  "sites": [
+    {
+      "path": "/config/agnesl-adobe/sites/agnes-eds-demo.json",
+      "name": "agnes-eds-demo"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/al-wknd.json",
+      "name": "al-wknd"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/alda.json",
+      "name": "alda"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/alxwalk.json",
+      "name": "alxwalk"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/iggroup.json",
+      "name": "iggroup"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/jlr-demo.json",
+      "name": "jlr-demo"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/sixty60.json",
+      "name": "sixty60"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/test.json",
+      "name": "test"
+    },
+    {
+      "path": "/config/agnesl-adobe/sites/uedemo.json",
+      "name": "uedemo"
+    }
+  ]
+}

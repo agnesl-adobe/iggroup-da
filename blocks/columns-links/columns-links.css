@@ -1,0 +1,104 @@
+/* columns-links — two audience columns, each: sub-heading + lifestyle image + arrow-link list.
+   Values extracted from ig.com/en computed styles; colors/type mapped to brand tokens. */
+
+/* Row: stack on mobile, two equal columns on desktop */
+.columns-links .columns-links-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.columns-links .columns-links-col {
+  display: block;
+}
+
+/* Sub-heading (source standalone text: 26px / 600, black, 30px bottom gap) */
+.columns-links .columns-links-col h3 {
+  margin: 0 0 30px;
+  font-family: var(--heading-font-family);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: var(--text-color);
+}
+
+/* Lifestyle image — 16:9, rounded 40px, cover.
+   Override global `main img { width:auto }` and the picture wrapper's <p> margins. */
+.columns-links .columns-links-col p {
+  margin: 0 0 22px;
+}
+
+.columns-links .columns-links-col picture {
+  display: block;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.columns-links .columns-links-col picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* Link list */
+.columns-links .columns-links-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.columns-links .columns-links-col ul li {
+  margin: 20px 0 0;
+  font-size: 16px;
+  overflow: visible;
+}
+
+/* Link: black text, 16px / 500, no underline. Override global inline-block/ellipsis/nowrap. */
+.columns-links .columns-links-col ul li a,
+.columns-links .columns-links-col ul li a:any-link {
+  display: inline;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: clip;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Arrow ↗ after each link — IG blue (source rgb(6,91,219)), replaces global Font Awesome chevron. */
+.columns-links .columns-links-col ul li a::after {
+  content: " ↗";
+  float: none;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 2px;
+  padding: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--link-color);
+}
+
+.columns-links .columns-links-col ul li a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.columns-links .columns-links-col ul li a:hover::after {
+  color: var(--link-color);
+}
+
+/* Desktop: two equal columns, 40px gutter (source: 580px 580px, column-gap 40px) */
+@media (width >= 900px) {
+  .columns-links .columns-links-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 40px;
+  }
+}

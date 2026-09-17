@@ -1,0 +1,83 @@
+/* cards-stats — "Join 400,000+ traders who trust us" trust-stats row.
+   Values extracted from getComputedStyle on https://www.ig.com/en.
+   The accent panel background/padding is applied at the section level
+   (main .section.accent in styles.css); this file styles the heading
+   centering plus the stat figures/labels layout and typography. */
+
+/* Centre the section heading that sits above the stats grid.
+   Scoped to the accent section that actually contains this block. */
+main .section.accent:has(.cards-stats) > .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.accent:has(.cards-stats) > .default-content-wrapper h2 {
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+
+/* Stats grid */
+.cards-stats > ul {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 0;
+  text-align: center;
+}
+
+.cards-stats > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Empty authored image cell — no figure image in this variant */
+.cards-stats .cards-stats-figure {
+  display: none;
+}
+
+/* Large statistic figure (authored as h3) */
+.cards-stats .cards-stats-label h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+/* Supporting label */
+.cards-stats .cards-stats-label p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+}
+
+@media (width >= 900px) {
+  main .section.accent:has(.cards-stats) > .default-content-wrapper h2 {
+    font-size: 48px;
+  }
+
+  .cards-stats > ul {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    margin-top: 48px;
+  }
+
+  .cards-stats .cards-stats-label h3 {
+    font-size: 40px;
+  }
+
+  .cards-stats .cards-stats-label p {
+    font-size: 22px;
+  }
+}

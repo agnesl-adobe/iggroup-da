@@ -1,0 +1,15 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "iggroup": {
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+      "previewOrg": "agnesl-adobe",
+      "previewSite": "iggroup",
+      "contentHostUrl": "author-p179457-e1900808.adobeaemcloud.com",
+      "aemSitePath": "/content/iggroup",
+      "aemAssetsFolderPath": "/content/dam/iggroup",
+      "aemSiteName": "iggroup",
+      "aemSiteTitle": "iggroup"
+    }
+  }
+}

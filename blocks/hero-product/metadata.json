@@ -1,0 +1,10 @@
+{
+  "variantName": "hero-product",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Centered product-intro hero: large heading, supporting paragraph, two CTA buttons and a plain chat link, with a large product image (phone/app mockup) displayed below the text.",
+  "contentPattern": "One text cell (heading + copy + CTAs + link) and one media cell (product image).",
+  "usage": "Page-intro hero for a product or landing page where the imagery sits beneath a centered text stack.",
+  "options": [],
+  "memberVariantIds": ["hero-product"]
+}

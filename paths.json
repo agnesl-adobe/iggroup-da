@@ -1,0 +1,23 @@
+{
+  "mappings": [
+    "/content/iggroup/language-masters/en:/",
+    "/content/iggroup/language-masters/en/:/en/",
+    "/content/iggroup/language-masters/fr/:/fr/",
+    "/content/iggroup/language-masters/fr:/fr",
+    "/content/iggroup/language-masters/es/:/es/",
+    "/content/iggroup/language-masters/es:/es",
+    "/content/iggroup/language-masters/ja/:/ja/",
+    "/content/iggroup/language-masters/ja:/ja",
+    "/content/iggroup/language-masters/de/:/de/",
+    "/content/iggroup/language-masters/de:/de",
+    "/content/iggroup/article-page:/article-page",
+    "/content/iggroup/configuration:/.helix/config.json",
+    "/content/iggroup/metadata:/metadata.json",
+    "/content/iggroup/redirects:/redirects.json",
+    "/content/iggroup/placeholders:/placeholders.json"
+  ],
+  "includes": [
+    "/content/iggroup/",
+    "/content/dam/iggroup/"
+  ]
+}

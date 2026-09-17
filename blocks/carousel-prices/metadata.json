@@ -1,0 +1,10 @@
+{
+  "variantName": "carousel-prices",
+  "baseBlock": "carousel",
+  "canonicalModel": "container",
+  "visualCharacteristics": "A single horizontal scrolling row of compact live-market price tiles, each showing an instrument name, its current price and a percentage change.",
+  "contentPattern": "Each row is one price tile; cells within a row map to instrument, price and change in order.",
+  "usage": "Live-prices ticker strip beneath a hero or at the top of a markets page.",
+  "options": [],
+  "memberVariantIds": ["carousel-prices"]
+}

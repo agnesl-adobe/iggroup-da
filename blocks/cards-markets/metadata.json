@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-markets",
+  "baseBlock": "cards",
+  "canonicalModel": "container",
+  "visualCharacteristics": "A grid of six market-category cards, each with a 3D icon, a title and a short description, arranged three-across on desktop.",
+  "contentPattern": "Each row is one card; first cell is the icon image, remaining cells are the title and description text.",
+  "usage": "Market/category overview grid showing the range of tradable assets.",
+  "options": [],
+  "memberVariantIds": ["cards-markets"]
+}

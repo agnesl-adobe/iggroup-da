@@ -1,0 +1,204 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.ig.com/en"
+      ],
+      "representativeUrl": "https://www.ig.com/en",
+      "description": "",
+      "blocks": [
+        {
+          "name": "hero-product",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn--default--none.aem-GridColumn--phone--none.aem-GridColumn--phone--11.aem-GridColumn.aem-GridColumn--default--12.aem-GridColumn--offset--phone--0.aem-GridColumn--offset--default--0"
+          ]
+        },
+        {
+          "name": "carousel-prices",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "cards-markets",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)"
+          ]
+        },
+        {
+          "name": "columns-promo",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5)"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7)"
+          ]
+        },
+        {
+          "name": "columns-links",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(9)"
+          ]
+        },
+        {
+          "name": "columns-steps",
+          "instances": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(10)"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "sections": [
+        {
+          "id": "rc-esma",
+          "name": "rc-esma",
+          "selector": [
+            "body > div.wrapper > div.esma.experiencefragment"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-hero",
+          "name": "rc-hero",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn--default--none.aem-GridColumn--phone--none.aem-GridColumn--phone--11.aem-GridColumn.aem-GridColumn--default--12.aem-GridColumn--offset--phone--0.aem-GridColumn--offset--default--0"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-liveprices",
+          "name": "rc-liveprices",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(2)"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-prices"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-markets",
+          "name": "rc-markets",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(3)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-markets"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-spacer-1",
+          "name": "rc-spacer-1",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.vertical-spacer.mt-4xl.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-rewards",
+          "name": "rc-rewards",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(5)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-platforms",
+          "name": "rc-platforms",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(6)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-trust-stats",
+          "name": "rc-trust-stats",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(7)"
+          ],
+          "style": "accent",
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-spacer-2",
+          "name": "rc-spacer-2",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.vertical-spacer.mt-4xl.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(8)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-everything",
+          "name": "rc-everything",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(9)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-links"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-joinig",
+          "name": "rc-joinig",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(10)"
+          ],
+          "style": "grey",
+          "blocks": [
+            "columns-steps"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc-disclaimer",
+          "name": "rc-disclaimer",
+          "selector": [
+            "#main-content > div.container.responsivegrid > div.cmp-container > div.aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 > div.container.responsivegrid.container--mw-1200.aem-GridColumn.aem-GridColumn--default--12:nth-of-type(11)"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "xwalk"
+  }
+}

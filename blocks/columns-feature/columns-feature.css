@@ -1,0 +1,109 @@
+/* columns-feature — platform screenshot beside heading + benefit checklist + CTA.
+   Values extracted from source (ig.com/en, .account-panel). Mobile-first. */
+
+.columns-feature .columns-feature-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 32px;
+}
+
+/* Text column */
+.columns-feature .columns-feature-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-feature .columns-feature-content h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: normal;
+  margin: 0 0 10px;
+}
+
+/* Benefit checklist — green check-circle icon before each item */
+.columns-feature .columns-feature-content ul {
+  list-style: none;
+  margin: 16px 0 32px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-feature .columns-feature-content ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18.4px;
+  color: var(--text-color);
+}
+
+.columns-feature .columns-feature-content ul li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z" stroke="%23079455" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 28px;
+}
+
+/* CTA button — brand red pill comes from global styles; keep it left-aligned */
+.columns-feature .columns-feature-content .button-container {
+  margin: 0;
+  justify-content: flex-start;
+}
+
+/* Image column — reserve source proportions (506x450) so layout holds
+   even before/without the screenshot asset. */
+.columns-feature .columns-feature-media {
+  aspect-ratio: 506 / 450;
+}
+
+.columns-feature .columns-feature-media picture,
+.columns-feature .columns-feature-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.columns-feature .columns-feature-media img {
+  object-fit: contain;
+  border-radius: 40px;
+}
+
+@media (width >= 900px) {
+  .columns-feature .columns-feature-row {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 60px;
+    padding: 96px 0;
+  }
+
+  .columns-feature .columns-feature-content {
+    flex: 1 1 0;
+    max-width: 600px;
+  }
+
+  .columns-feature .columns-feature-content h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .columns-feature .columns-feature-media {
+    flex: 0 1 auto;
+    width: 506px;
+    max-width: 45%;
+  }
+
+  .columns-feature .columns-feature-media img {
+    max-height: 450px;
+  }
+}

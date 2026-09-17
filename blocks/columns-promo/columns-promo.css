@@ -1,0 +1,101 @@
+/* columns-promo — two side-by-side promotional panels.
+   Full-bleed background imagery, heading, description and a plain
+   "Learn more" link, content bottom-aligned. Values extracted from
+   https://www.ig.com/en (see migration-work/columns-promo-extracted.css). */
+
+.columns-promo .columns-promo-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.columns-promo .columns-promo-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* source: align-content: end (content sits at bottom) */
+  gap: 0;
+  padding: 28px; /* source panel padding */
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 16px; /* rounded card corners */
+  aspect-ratio: 580 / 542; /* source panel ratio */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* source: background-size cover */
+}
+
+/* Panel 1 — "Refer a friend" (lavender, black text) */
+.columns-promo .columns-promo-row > .columns-promo-panel:first-child {
+  background-color: #e4e3fb;
+  background-image: url('https://www.ig.com/content/dam/publicsites/igcom/EN/images/referafriend.png/jcr:content/renditions/rendition-1200.webp');
+  color: #000;
+}
+
+/* Panel 2 — "Volume-based rebates" (blue, white text) */
+.columns-promo .columns-promo-row > .columns-promo-panel:nth-child(2) {
+  background-color: #1958e6;
+  background-image: url('https://www.ig.com/content/dam/publicsites/igcom/EN/images/rebates.png/jcr:content/renditions/rendition-1200.webp');
+  color: #fff;
+}
+
+/* Title (first paragraph) */
+.columns-promo .columns-promo-panel > p:first-child {
+  margin: 0 0 16px;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  color: inherit;
+}
+
+/* Description paragraph(s) */
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-promo .columns-promo-panel > p {
+  margin: 0 0 16px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: inherit;
+}
+
+.columns-promo .columns-promo-panel > p:last-child {
+  margin-bottom: 0;
+}
+
+/* "Learn more" — source is a plain inline link, NOT a red pill.
+   Override the global a.button pill decoration (which uses !important). */
+.columns-promo .columns-promo-panel .button-container {
+  display: block;
+  margin: 0;
+}
+
+.columns-promo .columns-promo-panel a.button:any-link {
+  display: inline;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: inherit !important;
+  white-space: normal;
+  text-decoration: none;
+}
+
+.columns-promo .columns-promo-panel a.button:any-link:hover {
+  background: transparent !important;
+  color: inherit !important;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-promo .columns-promo-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* source column gap */
+  }
+}

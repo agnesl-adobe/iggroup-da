@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-stats",
+  "baseBlock": "cards",
+  "canonicalModel": "container",
+  "visualCharacteristics": "A row of four trust statistics on a solid accent panel, each showing a large figure above a short label.",
+  "contentPattern": "Each row is one statistic; first cell is the figure, second cell is the label.",
+  "usage": "Trust/credibility stat row (e.g. markets available, years' experience) on an accent panel.",
+  "options": [],
+  "memberVariantIds": ["cards-stats"]
+}

@@ -1,0 +1,145 @@
+/* columns-steps — "Join IG" numbered step list beside a lifestyle image.
+   Values extracted from ig.com/en computed styles; brand tokens used where they
+   match. Section grey panel + rounded corners come from styles.css (.section.grey). */
+
+.columns-steps .columns-steps-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.columns-steps .columns-steps-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.columns-steps .columns-steps-content > * {
+  margin: 0;
+}
+
+/* Heading — "Join IG" (source 48px/48px, weight 700, black) */
+.columns-steps .columns-steps-content h2 {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Sub-heading — "Get started in 3 simple steps." (source 22px/22px) */
+.columns-steps .columns-steps-content > p {
+  margin: 0 0 24px;
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+/* Numbered step list */
+.columns-steps .columns-steps-content ol {
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+  counter-reset: columns-steps-counter;
+}
+
+.columns-steps .columns-steps-content ol > li {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 12px;
+  counter-increment: columns-steps-counter;
+}
+
+.columns-steps .columns-steps-content ol > li:last-child {
+  margin-bottom: 0;
+}
+
+/* Numbered blue circle badge (source: 24x24 circle #065bdb, white number) */
+.columns-steps .columns-steps-content ol > li::before {
+  content: counter(columns-steps-counter);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: var(--link-color);
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.columns-steps .columns-steps-step-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Step title (source 22px, weight 600) */
+.columns-steps .columns-steps-step-title {
+  margin: 0 0 5px;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* Step description (source 22px, weight 400) */
+.columns-steps .columns-steps-step-desc {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* CTA — red pill from global button styles; just tidy spacing */
+.columns-steps .columns-steps-content .button-container {
+  margin: 0;
+}
+
+/* Media column — rounded lifestyle image (source border-radius 40px) */
+.columns-steps .columns-steps-media {
+  width: 100%;
+}
+
+.columns-steps .columns-steps-media picture,
+.columns-steps .columns-steps-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  .columns-steps .columns-steps-row {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .columns-steps .columns-steps-content {
+    flex: 1 1 0;
+  }
+
+  .columns-steps .columns-steps-media {
+    flex: 0 0 506px;
+    max-width: 506px;
+  }
+
+  .columns-steps .columns-steps-content h2 {
+    font-size: 48px;
+  }
+
+  .columns-steps .columns-steps-content > p,
+  .columns-steps .columns-steps-step-title,
+  .columns-steps .columns-steps-step-desc {
+    font-size: 22px;
+  }
+}

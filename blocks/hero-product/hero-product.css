@@ -1,0 +1,247 @@
+/* hero-product — centered text stack (heading, copy, CTA row, chat link)
+   over a large product image below.
+   Values extracted from source: https://www.ig.com/en (.cmp-hero-section). */
+
+.hero-product.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* --- Text stack --- */
+.hero-product .hero-product-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 1060px;
+  width: 100%;
+}
+
+.hero-product .hero-product-text h1 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -1.12px;
+  color: var(--text-color);
+}
+
+.hero-product .hero-product-text h1 sup {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+.hero-product .hero-product-text > p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+/* Supporting copy (first plain paragraph) reads slightly larger and is
+   constrained so it wraps to two lines like ig.com (breaks at round-the-clock) */
+.hero-product .hero-product-text > p:first-of-type {
+  font-size: 20px;
+  max-width: 620px;
+}
+
+/* Chat / plain-link paragraph — IG blue inline links.
+   Reset the global anchor rule (inline-block / line-height: 20px) so the links
+   sit inline on the sentence baseline instead of floating out of the row. */
+.hero-product .hero-product-text > p a:any-link {
+  display: inline;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+.hero-product .hero-product-text > p a:any-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* IG's inline chat links have no trailing chevron — suppress the global
+   Font Awesome arrow that a::after adds. */
+.hero-product .hero-product-text > p a::after {
+  content: none !important;
+}
+
+/* --- CTA row (two pill buttons side by side) --- */
+.hero-product .hero-product-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.hero-product .hero-product-cta .button-container {
+  margin: 0;
+}
+
+/* Primary CTA — solid IG red pill */
+.hero-product .hero-product-cta a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px !important;
+  margin: 0 !important;
+  border: 1px solid var(--brand-theme-color) !important;
+  border-radius: 72px !important;
+  background-color: var(--brand-theme-color) !important;
+  color: var(--text-light) !important;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Secondary CTA — outlined dark pill on white */
+.hero-product .hero-product-cta .button-container.secondary a.button:any-link {
+  background-color: transparent !important;
+  border: 1px solid var(--text-color) !important;
+  color: var(--text-color) !important;
+}
+
+.hero-product .hero-product-cta .button-container.secondary a.button:any-link:hover {
+  background-color: var(--text-color) !important;
+  color: var(--text-light) !important;
+}
+
+/* --- Product image --- */
+.hero-product .hero-product-media {
+  width: 100%;
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-product .hero-product-media p {
+  margin: 0;
+}
+
+.hero-product .hero-product-media picture,
+.hero-product .hero-product-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Disable the global picture "shine" hover sweep on the hero image */
+.hero-product .hero-product-media picture::before {
+  content: none;
+}
+
+@media (width >= 900px) {
+  .hero-product.block {
+    gap: 40px;
+    padding: 24px 0 0;
+  }
+
+  .hero-product .hero-product-text {
+    gap: 40px;
+  }
+
+  .hero-product .hero-product-text h1 {
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -1.92px;
+  }
+
+  .hero-product .hero-product-text > p:first-of-type {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+/* code-sync nudge 1789485455 */
+
+/* ============================================================
+   Universal Editor ONLY overrides.
+   Scoped under .adobe-ue-edit / .adobe-ue-preview (the classes EDS adds to
+   <html> inside the editor canvas), so Preview and the published site — which
+   never carry these classes — are completely unaffected.
+
+   In the UE, each field is wrapped in a data-aue-* <div>. Those wrappers become
+   the flex items of .hero-product-text and .hero-product.block, which breaks the
+   flex `gap` rhythm and the `> p` selectors (blank band above the headline,
+   floating chat links, cramped spacing). Neutralise the wrappers and restate the
+   spacing as margins so the editor matches Preview.
+   ============================================================ */
+.adobe-ue-edit .hero-product.block > div:not(.hero-product-text, .hero-product-media),
+.adobe-ue-preview .hero-product.block > div:not(.hero-product-text, .hero-product-media),
+.adobe-ue-edit .hero-product .hero-product-text > div,
+.adobe-ue-preview .hero-product .hero-product-text > div {
+  display: contents;
+}
+
+/* Tighter top gap between the nav bar and the headline (matches Preview). */
+.adobe-ue-edit .hero-product.block,
+.adobe-ue-preview .hero-product.block {
+  padding-top: 8px;
+}
+
+/* Slightly tighter vertical rhythm between rows than the first pass. */
+.adobe-ue-edit .hero-product .hero-product-text > p,
+.adobe-ue-preview .hero-product .hero-product-text > p {
+  margin: 2px 0 0;
+}
+
+.adobe-ue-edit .hero-product .hero-product-cta,
+.adobe-ue-preview .hero-product .hero-product-cta {
+  margin: 4px 0 0;
+}
+
+.adobe-ue-edit .hero-product .hero-product-cta + p,
+.adobe-ue-preview .hero-product .hero-product-cta + p {
+  margin-top: 3px;
+}
+
+.adobe-ue-edit .hero-product .hero-product-media,
+.adobe-ue-preview .hero-product .hero-product-media {
+  margin-top: 24px;
+}
+
+/* Inline chat links ("web chat", "WhatsApp") in the "Got questions?" row.
+   In Preview the paragraph is a direct child of .hero-product-text, so the
+   `> p a` block rule applies and the links sit inline on the sentence baseline.
+   In the UE the paragraphs are nested inside data-aue-* instrumentation
+   wrappers, so that direct-child rule misses and the global
+   `a { display: inline-block; line-height: 20px; overflow: hidden }` wins —
+   which lifts the links off the baseline (they "float" above the text).
+   Restate the inline treatment with a DESCENDANT selector (any depth) so it
+   catches the links regardless of the wrapper nesting the editor adds, and
+   clear the inline-block-only properties that cause the float. */
+.adobe-ue-edit .hero-product .hero-product-text a:any-link:not(.button),
+.adobe-ue-preview .hero-product .hero-product-text a:any-link:not(.button) {
+  display: inline;
+  vertical-align: baseline;
+  line-height: inherit;
+  overflow: visible;
+  white-space: normal;
+  margin: 0;
+}
+
+/* Suppress the global Font Awesome chevron (a::after) on the inline chat links.
+   The block already does this via `> p a::after`, but that direct-child
+   selector misses in the UE (paragraphs are nested in instrumentation
+   wrappers), so restate it as a descendant rule. Without this the "web chat"
+   and "WhatsApp" links show trailing arrows in the editor. */
+.adobe-ue-edit .hero-product .hero-product-text a:any-link:not(.button)::after,
+.adobe-ue-preview .hero-product .hero-product-text a:any-link:not(.button)::after {
+  content: none !important;
+}

@@ -1,0 +1,141 @@
+/* carousel-prices — horizontally-scrolling live-price ticker.
+ *
+ * Visual design extracted from the source igws-live-prices-carousel
+ * (international / default theme). Each tile is a white rounded card with a
+ * soft shadow: instrument flag on the left, name in semibold, and the price
+ * stacked over the % change on the right (price black, change coloured —
+ * positive blue, negative red).
+ *
+ * NOTE: on the source this ticker is a client-side hydrated web component, so
+ * the imported page ships an empty block shell with no authored tiles. These
+ * rules are structural so the strip renders cleanly whenever tiles ARE
+ * authored (image cell = flag; then name, price, change cells).
+ */
+
+.carousel-prices.block {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Track: horizontal scrolling row of tiles */
+.carousel-prices .carousel-prices-track {
+  list-style: none;
+  margin: 0;
+  padding: 16px 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-prices .carousel-prices-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tile: white rounded card with soft shadow */
+.carousel-prices .carousel-prices-tile {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 45px auto;
+  column-gap: 10px;
+  align-items: center;
+  min-width: 250px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: var(--background-color);
+  box-shadow: rgb(0 0 0 / 10%) 0 0 10px 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+/* Flag / instrument logo */
+.carousel-prices .carousel-prices-flag {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-prices .carousel-prices-flag picture,
+.carousel-prices .carousel-prices-flag img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+}
+
+/* suppress global picture shine effect inside tiles */
+.carousel-prices .carousel-prices-flag picture::before {
+  content: none;
+}
+
+/* Data area: instrument name | price+change column */
+.carousel-prices .carousel-prices-data {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.carousel-prices .carousel-prices-instrument {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* instrument name is often an anchor — keep it black, drop the global chevron */
+.carousel-prices .carousel-prices-instrument a:any-link {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.carousel-prices .carousel-prices-instrument a::after {
+  content: none;
+}
+
+.carousel-prices .carousel-prices-instrument a:hover {
+  text-decoration: none;
+}
+
+/* Price / change column, right-aligned */
+.carousel-prices .carousel-prices-fids {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 70px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.carousel-prices .carousel-prices-price {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.carousel-prices .carousel-prices-change {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Gains blue, losses red — matches source (#065bdb / #ff514b) */
+.carousel-prices .carousel-prices-change.is-positive {
+  color: var(--link-color, #065bdb);
+}
+
+.carousel-prices .carousel-prices-change.is-negative {
+  color: #ff514b;
+}
+
+.carousel-prices .carousel-prices-tile p {
+  margin: 0;
+}

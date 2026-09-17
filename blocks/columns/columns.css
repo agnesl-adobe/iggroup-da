@@ -1,0 +1,309 @@
+
+.columns-wrapper {
+  box-sizing: border-box;
+}
+
+.columns-wrapper .columns {
+  box-sizing: border-box;
+}
+
+.columns-wrapper .columns .columns-row {
+  box-sizing: border-box;
+}
+
+.columns > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns img {
+  width: 100%;
+}
+
+.columns > div > div {
+  order: 1;
+}
+
+.columns > div > .columns-img-col {
+  order: 0;
+}
+
+.columns > div > .columns-img-col img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-height: 500px;
+}
+
+.columns .columns-video-col {
+  order: 0;
+}
+
+.columns video {
+  display: block;
+  width: 100%;
+}
+
+
+@media (width >= 900px) {
+  .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+
+
+
+/* Responsive Styles */
+@media (width < 1024px) {
+  .columns-container .columns-wrapper {
+    padding: 0 5%;
+  }
+
+  .columns-container .columns-wrapper .columns {
+    display: block;
+  }
+
+  .columns-container .columns-wrapper .columns .columns-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .columns-container .columns-wrapper .columns .columns-row h1, 
+  .columns-container .columns-wrapper .columns .columns-row h2, 
+  .columns-container .columns-wrapper .columns .columns-row h3, 
+  .columns-container .columns-wrapper .columns .columns-row h4, 
+  .columns-container .columns-wrapper .columns .columns-row h5, 
+  .columns-container .columns-wrapper .columns .columns-row h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+}
+
+@media (width < 768px) { 
+  .columns-container .columns-wrapper {
+    padding: 0 4%;
+  }
+
+}
+
+
+/* ============================================================
+   IG homepage columns variants
+   These blocks were authored as forked variants but serialize to the native
+   columns component; columns.js tags them with a *-ig class from a content
+   signature. Styles below target the NATIVE columns DOM
+   (.columns-row > div, .columns-img-col) — extracted from https://www.ig.com/en.
+   ============================================================ */
+
+/* --- columns-promo: two promotional panels, plain "Learn more" links --- */
+.columns.columns-promo-ig .columns-row {
+  gap: 16px;
+}
+
+.columns.columns-promo-ig .columns-row > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  border-radius: 16px;
+  min-height: 320px;
+  /* Stacked mobile card: use the illustration's own ratio so the copy sits in
+     its open lower area (desktop overrides to a shorter square below). */
+  aspect-ratio: 75 / 109;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (width >= 900px) {
+  .columns.columns-promo-ig .columns-row > div {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Full-card illustration behind the text. The illustration's subject sits in the
+   top ~55%; anchor it to the top so it stays visible in the shorter card. */
+.columns.columns-promo-ig .columns-promo-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Gradient scrim fading the artwork into the card colour behind the copy, so the
+   text stays legible where the shorter card overlaps the illustration. */
+.columns.columns-promo-ig .columns-row > div::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 60%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.columns.columns-promo-ig .columns-row > div:first-child::after {
+  background: linear-gradient(to top, #e4e3fb 28%, rgba(228, 227, 251, 0));
+}
+
+.columns.columns-promo-ig .columns-row > div:nth-child(2)::after {
+  background: linear-gradient(to top, #1958e6 28%, rgba(25, 88, 230, 0));
+}
+
+/* Raise every non-image child above the illustration + scrim. Targets any direct
+   child (not just <p>) so the copy stays visible even when the Universal Editor
+   wraps each field in its own data-aue instrumentation <div>. */
+.columns.columns-promo-ig .columns-row > div > *:not(.columns-promo-bg) {
+  position: relative;
+  z-index: 2;
+}
+
+.columns.columns-promo-ig .columns-row > div:first-child {
+  background-color: #e4e3fb;
+  color: #000;
+}
+
+.columns.columns-promo-ig .columns-row > div:nth-child(2) {
+  background-color: #1958e6;
+  color: #fff;
+}
+
+.columns.columns-promo-ig .columns-row > div > p:first-child {
+  margin: 0 0 16px;
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.columns.columns-promo-ig .columns-row > div p {
+  margin: 0 0 16px;
+  color: inherit;
+}
+
+.columns.columns-promo-ig .columns-row .button-container {
+  display: block;
+  margin: 0;
+}
+
+.columns.columns-promo-ig .columns-row a.button:any-link {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: normal;
+  text-decoration: underline;
+}
+
+/* --- columns-feature: checklist + single screenshot (image beside text) --- */
+.columns.columns-feature-ig .columns-row .columns-img-col img {
+  border-radius: 40px;
+}
+
+.columns.columns-feature-ig .columns-row > div:not(.columns-img-col) ul {
+  list-style: none;
+  margin: 16px 0 32px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.columns.columns-feature-ig .columns-row > div:not(.columns-img-col) ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+}
+
+.columns.columns-feature-ig .columns-row > div:not(.columns-img-col) ul li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px 28px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z" stroke="%23079455" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+/* --- columns-links: two audience columns, image + arrow-link list --- */
+.columns.columns-links-ig .columns-row > div img {
+  border-radius: 40px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+
+.columns.columns-links-ig .columns-row > div ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.columns.columns-links-ig .columns-row > div ul li {
+  margin: 20px 0 0;
+}
+
+.columns.columns-links-ig .columns-row > div ul li a::after {
+  content: " ↗";
+  margin-left: 2px;
+  color: var(--link-color);
+}
+
+/* --- columns-steps: numbered "Join IG" steps beside an image --- */
+.columns.columns-steps-ig .columns-row > div:not(.columns-img-col) ol {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  counter-reset: ig-step;
+}
+
+.columns.columns-steps-ig .columns-row > div:not(.columns-img-col) ol > li {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 12px;
+  counter-increment: ig-step;
+}
+
+.columns.columns-steps-ig .columns-row > div:not(.columns-img-col) ol > li::before {
+  content: counter(ig-step);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: var(--link-color);
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.columns.columns-steps-ig .columns-row .columns-img-col img {
+  border-radius: 40px;
+}

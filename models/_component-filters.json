@@ -1,0 +1,116 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "accordion",
+      "action-button",
+      "button",
+      "button",
+      "cards",
+      "carousel",
+      "columns",
+      "contentfragment",
+      "download-list",
+      "dm-asset",
+      "dm-template",
+      "embed-adaptive-form",
+      "find-a-doctor",
+      "forex",
+      "form",
+      "fragment",
+      "hero",
+      "hero-product",
+      "carousel-prices",
+      "cards-markets",
+      "cards-stats",
+      "columns-promo",
+      "columns-feature",
+      "columns-links",
+      "columns-steps",
+      "image",
+      "promotion",
+      "quote",
+      "search",
+      "separator",
+      "tabs",
+      "teaser",
+      "text",
+      "title",
+      "title-block",
+      "video"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "carousel-prices",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-markets",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-stats",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-promo",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-feature",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-links",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "columns-steps",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "button",
+      "dm-asset",
+      "dm-template",
+      "image",
+      "text",
+      "title",
+      "title-block",
+      "video"
+    ]
+  }
+]

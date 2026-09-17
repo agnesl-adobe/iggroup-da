@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "canonicalModel": "container",
+  "visualCharacteristics": "Two-column feature layout: a platform screenshot on one side, a heading with a four-item benefit checklist and a CTA button on the other.",
+  "contentPattern": "A single row of two columns; one column is an image, the other is heading + checklist + button.",
+  "usage": "Feature/platform highlight with a supporting screenshot.",
+  "options": [],
+  "memberVariantIds": ["columns-feature"]
+}

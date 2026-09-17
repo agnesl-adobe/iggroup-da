@@ -1,0 +1,10 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "canonicalModel": "container",
+  "visualCharacteristics": "Two side-by-side promotional panels, each with background imagery, a heading, a description and a 'Learn more' link.",
+  "contentPattern": "A single row of two columns; each column is a promotional panel with heading, copy and link.",
+  "usage": "Paired promotional callouts such as rewards and rebates.",
+  "options": [],
+  "memberVariantIds": ["columns-promo"]
+}

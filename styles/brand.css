@@ -1,0 +1,74 @@
+/*
+ * brand.css — IG.com brand tokens (extracted from https://www.ig.com/en)
+ * Overrides the --brand-* variables that styles.css references via
+ * var(--brand-*, fallback), plus the Matter SQ web font.
+ */
+
+/* --- Matter SQ web font (served from IG's CDN) --- */
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://a.c-dn.net/z/3cSaXx.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://a.c-dn.net/z/1fS4in.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://a.c-dn.net/z/2JMRSD.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://a.c-dn.net/z/0wCUTk.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Matter SQ";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://a.c-dn.net/z/4ymtkZ.woff") format("woff");
+}
+
+:root {
+  /* brand colors */
+  --brand-background-color: #fff;
+  --brand-dark-color: #000;
+  --brand-light-color: #f5f5f5;
+  --brand-text-color: #000;
+  --brand-light-text-color: #fff;
+  --brand-link-color: #065bdb;
+  --brand-link-hover-color: #0446aa;
+  --brand-theme-color: #e61e1e;
+
+  /* brand header/footer */
+  --brand-nav-background-color: #fff;
+  --brand-nav-text-color: #000;
+  --brand-footer-background-color: #000;
+  --brand-footer-text-color: #fff;
+
+  /* IG accent panel (trust stats) */
+  --brand-accent-panel-color: #c7d9fd;
+
+  /* brand fonts — Matter SQ for everything */
+  --body-font-family: "Matter SQ", arial, sans-serif;
+  --heading-font-family: "Matter SQ", arial, sans-serif;
+  --light-font-family: "Matter SQ", arial, sans-serif;
+  --extra-font-family: "Matter SQ", arial, sans-serif;
+  --black-font-family: "Matter SQ", arial, sans-serif;
+}
