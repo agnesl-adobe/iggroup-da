@@ -1,0 +1,9 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  ":type": "sheet",
+  "data": [
+    { "title": "Blocks", "path": "/block-collection" }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "project": "IG Group (da.live)",
+  "editUrlLabel": "Edit in DA",
+  "editUrlPattern": "https://da.live/edit#/agnesl-adobe/iggroup-da{{pathname}}"
 }
